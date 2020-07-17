@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#SBATCH -p short --mem 2gb 
+#SBATCH -p short --mem 2gb
 
 module load gatk
 module load samtools
@@ -39,3 +39,4 @@ if [ ! -s $STRAIN.new_ref_from_${PREFIX}.fasta ]; then
 	gatk FastaAlternateReferenceMaker -R $DB -O $STRAIN.new_ref_from_${PREFIX}.fasta -V $VCF
 fi
 
+./gff3_to_CDS.py FungiDB-47_AfumigatusA1163.gff W7.new_ref_from_AfumigatusA1163.fasta
