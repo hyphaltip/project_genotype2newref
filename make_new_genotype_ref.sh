@@ -5,6 +5,9 @@ module load gatk
 module load samtools
 module load bcftools
 module load GAL
+module unload miniconda2
+module load miniconda3
+source activate bcbio
 
 # REF GENOME
 RELEASE=47
