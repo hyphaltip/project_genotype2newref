@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#SBATCH -p short --mem 2gb
+#SBATCH -p short --mem 24gb
 
 module load gatk
 module load samtools
